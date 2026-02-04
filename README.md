@@ -7,3 +7,4 @@ This repo tests org/oss-compliance reusable workflows.
 1) Open a PR that introduces `pm2` (AGPL) -> expect failure.
 2) Open a PR that only has `express` -> expect success.
 
+Test
