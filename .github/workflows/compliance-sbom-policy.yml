@@ -1,0 +1,19 @@
+name: compliance-sbom-policy
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * *"
+
+# ✅ IMPORTANT: give the called workflow enough permissions
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  sbom-policy:
+    uses: htm-cat/oss-compliance/.github/workflows/reusable-sbom-policy.yml@main
+    with:
+      upload_sbom: true

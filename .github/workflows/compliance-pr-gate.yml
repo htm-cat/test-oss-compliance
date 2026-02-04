@@ -1,0 +1,13 @@
+name: compliance-pr-gate
+
+on:
+  pull_request:
+
+# ✅ IMPORTANT: give the called workflow enough permissions
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pr-gate:
+    uses: htm-cat/oss-compliance/.github/workflows/reusable-pr-gate.yml@main
